@@ -1,4 +1,4 @@
-import { module, test } from 'qunit';
+import { module, skip } from 'qunit';
 import {
   visit, click, typeIn, currentURL,
 } from '@ember/test-helpers';
@@ -10,7 +10,7 @@ module('Acceptance | bbl lookup', function(hooks) {
   setupApplicationTest(hooks);
   setupMapMocks(hooks);
 
-  test('BBL lookup works', async function(assert) {
+  skip('BBL lookup works', async function(assert) {
     await visit('/');
     await mapboxGlLoaded();
     await click('.bbl-lookup-toggle');
